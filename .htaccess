@@ -1,0 +1,32 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+RewriteRule ^store$ store.php?module=store [L]
+RewriteRule ^profil-kami\.html$ store.php?module=profilkami&id=$1 [L]
+RewriteRule ^cara-pembelian\.html$ store.php?module=carabeli&id=$1 [L]
+RewriteRule ^produk-(.*)\.html$ store.php?module=detailproduk&id=$1 [L]
+RewriteRule ^cart-pesan\.html$ store.php?module=keranjangbelanja&id=$1 [L]
+RewriteRule ^selesai-pesan\.html$ store.php?module=selesaibelanja&id=$1 [L]
+RewriteRule ^kategori-([0-9]+)-(.*)\.html$ store.php?module=detailkategori&id=$1 [L]
+RewriteRule ^halkategori-([0-9]+)-(.*)\.html$ store.php?module=detailkategori&id=$1&halkategori=$2 [L]
+RewriteRule ^simpan-transaksi\.html$ store.php?module=simpantransaksi&id=$1 [L]
+RewriteRule ^hubungi-kami\.html$ store.php?module=hubungikami&id=$1 [L]
+RewriteRule ^hubungi-aksi\.html$ store.php?module=hubungiaksi&id=$1 [L]
+RewriteRule ^semua-produk\.html$ store.php?module=semuaproduk&id=$1 [L]
+RewriteRule ^halproduk-(.*)\.html$ store.php?module=semuaproduk&halproduk=$1 [L]
+RewriteRule ^hasil-pencarian\.html$ store.php?module=hasilcari&id=$1 [L]
+RewriteRule ^hasil-pencarian\.html$ store.php?module=hasilcari&id=$1 [L]
+
+RewriteRule ^statis-(.*)\.html$ store.php?module=halamanstatis&id=$1 [L]
+RewriteRule ^haldownload-(.*)\.html$ store.php?module=semuadownload&haldownload=$1 [L]
+RewriteRule ^semua-download\.html$ store.php?module=semuadownload&id=$1 [L]
+RewriteRule ^hasil-poling\.html$ store.php?module=hasilpoling&id=$1 [L]
+RewriteRule ^lihat-poling\.html$ store.php?module=lihatpoling&id=$1 [L]
+
+
+
+Options All -Indexes
+
+</IfModule>
+
